@@ -1,0 +1,121 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Start Page</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v1">
+    <link rel="shortcut icon" href="favicon.ico?v1" type="image/x-icon" /> 
+    <!-- links to quasar -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@^6.0.0/css/materialdesignicons.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/ionicons@^4.0.0/dist/css/ionicons.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/eva-icons@^1.0.0/style/eva-icons.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://themify.me/wp-content/themes/themify-v32/themify-icons/themify-icons.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@^1.0.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/animate.css@^4.0.0/animate.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/quasar@2.4.2/dist/quasar.rtl.prod.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>startpage v 1.0</header>
+    <div id="app">
+
+      <q-parallax src="./image/nord_mountain.jpeg">
+        <div id="start">
+          Welcome, <span>mario</span>.
+          <div id="cursor-typing"></div>
+        </div>
+      </q-parallax>
+
+      <div class="q-pa-md">
+        <q-input bottom-slots v-model="text" label="Search Here" filled dark 
+        @keyup.enter="search"
+style="margin-top: 10px;"
+>
+
+        <template v-slot:append>
+          <q-icon v-if="text !== ''" name="close" @click="text = ''" class="cursor-pointer" />
+        </template>
+
+        <template v-slot:hint>
+          Need to search something?
+        </template>
+
+        <template v-slot:after>
+          <q-btn round dense flat icon="search" @click="search"/>
+        </template>
+      </q-input>
+
+      </div>
+
+      <div class="q-pa-md row justify-center items-start q-gutter-md">
+        <!-- cards -->
+        <q-card class="my-card" v-for="(value, key) in data">
+          <q-parallax :src="img[key]" :height="150"></q-parallax>
+
+          <q-card-section class="section">
+            <div class="text-h6 sub-text-header">{{key}}</div>
+            <div class="text-subtitle2">
+              <q-list bordered separator>
+                <q-item clickable v-ripple v-for="it in value"
+                :key="it.name" :href="it.link" target="_blank">
+                  <q-item-section class="section-item">{{it.name}}</q-item-section>
+                </q-item>
+              </q-list>
+            </div>
+          </q-card-section>
+        </q-card>
+
+      </div>
+<footer>
+  startpage v 1.0 by Mario. Made for any browsers because default startpage sucks.
+</footer>
+  </body>
+  <!-- Add the following at the end of your body tag -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/quasar@2.4.2/dist/quasar.umd.prod.js"></script>
+  <script src="./app.js"></script>
+</html>

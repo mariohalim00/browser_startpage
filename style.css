@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Pushster&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap');
+
+body{
+  background-color: #2E3440;
+  color: #D8DEE9;
+  font-family: 'Roboto Mono', monospace;
+}
+
+#start{
+  height: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  font-size: xxx-large;
+  position: relative;
+}
+
+#start span{
+  color: #8FBCBB;
+  font-family: 'Roboto Mono', monospace;
+}
+/* 5E81AC */
+#cursor-typing{
+  border-bottom: solid 3px #B48EAD;
+  position: absolute;
+  right: -5px;
+  width: 30px;
+}
+
+/* animation */
+
+#start{
+  animation: animated-text 2s steps(30, end) 1s 1 normal both;
+}
+
+#cursor-typing {
+  animation: animated-cursor 600ms steps(30,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 475px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-bottom-color: #B48EAD;}
+  to{border-bottom-color: transparent;}
+}
+
+.section{
+  background-color: #434C5E;
+  text-align: center;
+}
+.section .sub-text-header{
+  color: #8FBCBB;
+}
+
+.section .section-item{
+  color: #81A1C1;
+  text-decoration: none;
+}
+
+
+
+.section .section-item:hover{
+  color: #BF616A;
+  font-weight: bold;
+  text-decoration: underline;
+  /* background-color: #3B4252; */
+}
+
+
+li.arrow::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  height: 5px;
+  width: 5px;
+  border: 1px solid #f9dd94;
+  border-width: 2px 2px 0 0;
+  transform: rotate(45deg);
+}
+
+.parallax{
+  background: url('./nord_mountain.jpeg') no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  max-width: 75%;
+  height: 75%;
+}
+.my-card{
+  width: 100%;
+  max-width: 500px;
+}
