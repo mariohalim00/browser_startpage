@@ -67,7 +67,7 @@ const mydata = {
       name: "gmail",
       link: "https://www.mail.google.com",
     },
-    {canon
+    {
       name: "LinkedIn",
       link: "https://www.linkedin.com/login?fromSignIn=true",
     },
@@ -144,6 +144,10 @@ const mydata = {
     {
       name: "Based Cooking",
       link: "https://based.cooking/",
+    },
+    {
+      name: "Monkey Type",
+      link: "https://monkeytype.com",
     },
     {
       name: "my genshin app",
