@@ -81,6 +81,14 @@ const mydata = {
       name: "socs1 - thesis",
       link: "https://socs1.binus.ac.id/proposalskripsi/auth/login",
     },
+    {
+      name: "Sci-Hub (mirrors may change)",
+      link: "https://sci-hub.mksa.top/",
+    },
+    {
+      name: "libgen",
+      link: "https://libgen.is/",
+    },
   ],
   development: [
     {
