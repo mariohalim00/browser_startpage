@@ -30,6 +30,10 @@ const mydata = {
       name: "Linux Documentation",
       link: "https://linux.die.net",
     },
+    {
+      name: "Cheat.sh",
+      link: "https://cheat.sh",
+    },
   ],
 
   entertainment: [
@@ -101,7 +105,7 @@ const mydata = {
     },
     {
       name: "Colab",
-      link: "https://socs1.binus.ac.id/proposalskripsi/auth/login",
+      link: "https://colab.research.google.com/,
     },
     {
       name: "Kaggle",
@@ -159,13 +163,37 @@ const mydata = {
     },
     {
       name: "my genshin app",
-      link: "#",
+      link: "https://heuristic-wilson-iccs340-mario-6480420.netlify.app",
       wip: true,
     },
     {
       name: "Personal Webpage - WIP",
       link: "#",
       wip: true,
+    },
+  ],
+  miscellaneous_2: [
+    {
+      // learning platforms
+      // TODO: add image, change title
+      name: "learn-anything",
+      link: "https://https://learn-anything.xyz/",
+    },
+    {
+      name: "Tech Interview Handbook",
+      link: "https://www.techinterviewhandbook.org/",
+    },
+    {
+      name: "The Algorithms",
+      link: "https://the-algorithms.com/",
+    },
+    {
+      name: "NeetCode",
+      link: "https://neetcode.io",
+    },
+    {
+      name: "Odin Project",
+      link: "https://www.theodinproject.com",
     },
   ],
 };
@@ -186,6 +214,7 @@ const rootComponent = {
         video_and_photography: "./image/videoandphotography.gif",
         shopping_and_travelling: "./image/shoppingandtravel.gif",
         miscellaneous: "./image/misc.gif",
+        miscellaneous_2: "./image/misc.gif"
       }
     };
   },
