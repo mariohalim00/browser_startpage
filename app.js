@@ -105,7 +105,7 @@ const mydata = {
     },
     {
       name: "Colab",
-      link: "https://colab.research.google.com/,
+      link: "https://colab.research.google.com/",
     },
     {
       name: "Kaggle",
