@@ -223,7 +223,7 @@ const rootComponent = {
       const google_url = "https://www.google.com/search?q=";
       const search_q = this.text;
       const url = google_url + search_q;
-      window.open(url, "_blank");
+      window.open(urL, "_self");
       win.focus();
     },
   },
